@@ -28,7 +28,7 @@ const Card = ({ product, onRemove }: Props) => {
           <div>
             {product.categories.map(category => (
               <span className="badge badge-pill badge-secondary mr-2">
-                {category}
+                {category.name}
               </span>
             ))}
           </div>
