@@ -98,7 +98,9 @@ const Form = () => {
                 getOptionLabel={(option: Category) => option.name}
                 getOptionValue={(option: Category) => String(option.id)}
                 classNamePrefix="categories-select"
-                placeholder="Categoria"
+                placeholder="Categorias"
+                inputId="categories"
+                defaultValue=""
                 isMulti
               />
               {errors.categories && (
