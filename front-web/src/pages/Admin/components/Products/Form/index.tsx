@@ -91,7 +91,10 @@ const Form = () => {
               <Controller
                 as={Select}
                 name="categories"
-                rules={{ required: true }}
+                rules={{
+                  required: true,
+                  validate: (value: Category[]) => value?.length > 0
+                }}
                 control={control}
                 isLoading={isLoadingCategories}
                 options={categories}

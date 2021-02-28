@@ -39,7 +39,7 @@ const ProductFilters = ({ onSearch }: Props) => {
           value={name}
           className="form-control"
           placeholder="Pesquisar Produto"
-          onChange={ event => handleChangeName(event.target.name)}
+          onChange={ event => handleChangeName(event.target.value)}
         />
         <SearchIcon />
       </div>
