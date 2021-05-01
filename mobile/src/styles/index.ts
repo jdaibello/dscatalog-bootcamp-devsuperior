@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const colors = {
   white: "#FFFFFF",
@@ -59,8 +59,8 @@ const theme = StyleSheet.create({
     padding: 20,
   },
   card: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     backgroundColor: colors.white,
     borderRadius: 20,
     shadowColor: colors.black,
@@ -76,7 +76,7 @@ const theme = StyleSheet.create({
   draw: {
     width: 313,
     height: 225,
-    },
+  },
   textContainer: {
     paddingHorizontal: 20,
   },
@@ -126,6 +126,11 @@ const theme = StyleSheet.create({
   priceContainer: {
     flexDirection: "row",
     marginTop: 10,
+  },
+  productImage: {
+    width: 140,
+    height: 140,
+    margin: 16,
   },
   // Search Input
   inputContainer: {
