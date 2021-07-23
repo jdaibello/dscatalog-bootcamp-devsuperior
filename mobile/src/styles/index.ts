@@ -49,6 +49,24 @@ const text = StyleSheet.create({
     color: colors.primary,
     fontWeight: "bold",
   },
+  goBackText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    color: colors.darkGray,
+    marginLeft: 16,
+  },
+  productDetailsName: {
+    fontSize: 30,
+    fontWeight: "bold",
+    marginTop: 10,
+    color: colors.darkGray,
+  },
+  productDescription: {
+    fontSize: 16,
+    fontWeight: "400",
+    color: colors.mediumGray,
+  },
 });
 
 const theme = StyleSheet.create({
@@ -127,7 +145,7 @@ const theme = StyleSheet.create({
     flexDirection: "row",
     marginTop: 10,
   },
-  productImage: {
+  productImg: {
     width: 140,
     height: 140,
     margin: 16,
@@ -154,6 +172,51 @@ const theme = StyleSheet.create({
     height: 40,
     borderBottomWidth: 0.5,
     borderColor: colors.borderGray,
+  },
+  // Product Details
+  detailsContainer: {
+    backgroundColor: colors.lightGray,
+    padding: 20,
+  },
+  goBackContainer: {
+    width: 290,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    marginVertical: 10,
+  },
+  detailCard: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: colors.white,
+    borderRadius: 20,
+    shadowColor: colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    justifyContent: "space-around",
+    padding: 20,
+  },
+  productImageContainer: {
+    width: "100%",
+    borderWidth: 1,
+    borderColor: colors.lightGray,
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  productImage: {
+    width: 220,
+    height: 220,
+  },
+  scrollTextContainer: {
+    marginVertical: 20,
+    padding: 20,
+    borderWidth: 0.5,
+    borderRadius: 10,
+    borderColor: colors.lightGray,
   },
 });
 

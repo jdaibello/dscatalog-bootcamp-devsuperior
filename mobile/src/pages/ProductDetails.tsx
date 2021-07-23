@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { api } from "../services";
 import { theme, text } from "../styles";
 import arrow from "../assets/left_arrow.png";
@@ -16,6 +17,7 @@ const ProductDetails = ({
     params: { id },
   },
 }) => {
+  const navigation = useNavigation();
   const [product, setProduct] = useState({
     id: null,
     name: null,
@@ -40,27 +42,31 @@ const ProductDetails = ({
   }, []);
 
   return (
-    <View>
+    <View style={theme.detailsContainer}>
       {loading ? (
         <ActivityIndicator size="large" />
       ) : (
-        <View>
-          <TouchableOpacity>
+        <View style={theme.detailCard}>
+          <TouchableOpacity
+            style={theme.goBackContainer}
+            onPress={() => navigation.goBack()}
+          >
             <Image source={arrow} />
-            <Text>Voltar</Text>
+            <Text style={text.goBackText}>Voltar</Text>
           </TouchableOpacity>
-          <View>
+          <View style={theme.productImageContainer}>
             <Image
               source={{ uri: product.imgUrl }}
-              style={{ width: 150, height: 150 }}
+              style={theme.productImage}
             />
           </View>
-          <Text>{product.name}</Text>
-          <View>
-            <Text>{product.price}</Text>
+          <Text style={text.productDetailsName}>{product.name}</Text>
+          <View style={theme.priceContainer}>
+            <Text style={text.currency}>R$</Text>
+            <Text style={text.productPrice}>{product.price}</Text>
           </View>
-          <ScrollView>
-            <Text>{product.description}</Text>
+          <ScrollView style={theme.scrollTextContainer}>
+            <Text style={text.productDescription}>{product.description}</Text>
           </ScrollView>
         </View>
       )}
