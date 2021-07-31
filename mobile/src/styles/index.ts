@@ -75,6 +75,9 @@ const text = StyleSheet.create({
     textTransform: "uppercase",
     marginBottom: 50,
   },
+  logoutText: {
+    color: colors.white,
+  },
 });
 
 const theme = StyleSheet.create({
@@ -262,6 +265,11 @@ const theme = StyleSheet.create({
     // marginLeft: -40, // Doesn't work on my devide, it's hidden
     marginLeft: -17, // Wrong position, but it's visible
   },
+  buttonTextContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
 });
 
 const nav = StyleSheet.create({
@@ -291,6 +299,16 @@ const nav = StyleSheet.create({
   },
   textActive: {
     fontWeight: "bold",
+  },
+  logoutBtn: {
+    width: 60,
+    height: 30,
+    borderWidth: 1,
+    borderColor: colors.white,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 20,
   },
 });
 
