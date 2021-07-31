@@ -50,7 +50,10 @@ const NavBar: React.FC = () => {
               Catálogo
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={nav.option} onPress={() => navigate("ADM")}>
+          <TouchableOpacity
+            style={nav.option}
+            onPress={() => navigate("Login")}
+          >
             <Text
               style={[
                 nav.textOption,
