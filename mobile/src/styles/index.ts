@@ -78,6 +78,21 @@ const text = StyleSheet.create({
   logoutText: {
     color: colors.white,
   },
+  addButtonText: {
+    color: colors.white,
+    textTransform: "uppercase",
+    fontWeight: "bold",
+  },
+  deleteText: {
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    color: colors.red,
+  },
+  editText: {
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    color: colors.mediumGray,
+  },
 });
 
 const theme = StyleSheet.create({
@@ -270,6 +285,31 @@ const theme = StyleSheet.create({
     justifyContent: "center",
     flex: 1,
   },
+  buttonContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+  },
+  deleteBtn: {
+    width: "48%",
+    height: 40,
+    borderWidth: 1,
+    borderColor: colors.red,
+    borderRadius: 10,
+    marginVertical: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  editBtn: {
+    width: "48%",
+    height: 40,
+    borderWidth: 1,
+    borderColor: colors.mediumGray,
+    borderRadius: 10,
+    marginVertical: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 
 const nav = StyleSheet.create({
@@ -338,4 +378,20 @@ const tabbar = StyleSheet.create({
   },
 });
 
-export { colors, text, theme, nav, tabbar };
+const admin = StyleSheet.create({
+  container: {
+    padding: 10,
+    alignItems: "center",
+  },
+  addButton: {
+    width: "100%",
+    height: 50,
+    backgroundColor: colors.primary,
+    margin: 10,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+export { colors, text, theme, nav, tabbar, admin };
