@@ -14,9 +14,10 @@ import { text, theme } from "../styles";
 interface ProductProps {
   id: Number;
   name: string;
-  imgUrl: ImageSourcePropType;
+  imgUrl: string;
   price: string;
   role?: string;
+  handleDelete: Function;
 }
 
 const ProductCard: React.FC<ProductProps> = ({
@@ -25,12 +26,15 @@ const ProductCard: React.FC<ProductProps> = ({
   imgUrl,
   price,
   role,
+  handleDelete,
 }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={theme.productCard}
-      onPress={() => navigation.navigate("ProductDetails", { id })}
+      onPress={() =>
+        role ? "" : navigation.navigate("ProductDetails", { id })
+      }
     >
       <Image source={{ uri: imgUrl }} style={theme.productImg} />
       <View style={theme.productDescription}>
@@ -54,7 +58,10 @@ const ProductCard: React.FC<ProductProps> = ({
 
         {role === "admin" && (
           <View style={theme.buttonContainer}>
-            <TouchableOpacity style={theme.deleteBtn}>
+            <TouchableOpacity
+              style={theme.deleteBtn}
+              onPress={() => handleDelete(id)}
+            >
               <Text style={text.deleteText}>Excluir</Text>
             </TouchableOpacity>
             <TouchableOpacity style={theme.editBtn}>

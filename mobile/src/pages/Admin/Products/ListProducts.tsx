@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { admin, text } from "../../../styles";
 import { SearchInput, ProductCard } from "../../../components";
-import { getProducts } from "../../../services";
+import { deleteProduct, getProducts } from "../../../services";
 
 interface ProductProps {
   setScreen: Function;
@@ -19,6 +19,12 @@ const Products: React.FC<ProductProps> = (props) => {
   const [loading, setLoading] = useState(false);
 
   const { setScreen } = props;
+
+  async function handleDelete(id: number) {
+    setLoading(true);
+    const res = await deleteProduct(id);
+    fillProducts();
+  }
 
   async function fillProducts() {
     setLoading(true);
@@ -56,7 +62,14 @@ const Products: React.FC<ProductProps> = (props) => {
       ) : (
         data.map((product) => {
           const { id } = product;
-          return <ProductCard {...product} key={id} role="admin" />;
+          return (
+            <ProductCard
+              {...product}
+              key={id}
+              role="admin"
+              handleDelete={handleDelete}
+            />
+          );
         })
       )}
     </ScrollView>
