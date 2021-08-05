@@ -54,9 +54,10 @@ const Products: React.FC<ProductProps> = (props) => {
       {loading ? (
         <ActivityIndicator size="large" />
       ) : (
-        data.map((product) => (
-          <ProductCard {...product} key={product.id} role="admin" />
-        ))
+        data.map((product) => {
+          const { id } = product;
+          return <ProductCard {...product} key={id} role="admin" />;
+        })
       )}
     </ScrollView>
   );
