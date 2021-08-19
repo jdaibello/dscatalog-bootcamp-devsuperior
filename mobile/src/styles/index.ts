@@ -295,8 +295,7 @@ const theme = StyleSheet.create({
     padding: 10,
   },
   toggle: {
-    // marginLeft: -40, // Doesn't work on my devide, it's hidden
-    marginLeft: -17, // Wrong position, but it's visible
+    marginLeft: -30,
   },
   buttonTextContainer: {
     alignItems: "center",
@@ -391,6 +390,7 @@ const theme = StyleSheet.create({
   },
   textArea: {
     width: "100%",
+    maxWidth: "100%",
     height: 200,
     borderWidth: 1,
     borderColor: colors.mediumGray,

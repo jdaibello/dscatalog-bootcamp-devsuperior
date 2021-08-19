@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Text, View, Image, TextInput } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import { text, theme } from "../styles";
 
 import eyesOpened from "../assets/eyes-opened.png";
